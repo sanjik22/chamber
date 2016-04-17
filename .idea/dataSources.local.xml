@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - chamber@localhost" uuid="17da6a9d-57e0-4864-acef-84c5111d2481">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-pattern>chamber.pg_catalog chamber.public</schema-pattern>
+      <default-schemas>chamber.public</default-schemas>
+    </data-source>
+  </component>
+</project>
