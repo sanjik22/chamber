@@ -1,0 +1,7 @@
+{% extends 'index.html' %}
+
+{% block article %}
+    <h6>{{ article.article_date }}</h6>
+    <h4><a href="/articles/get/{{ article.id }}">{{ article.article_title }}</a></h4>
+    <p>{{ article.article_text|linebreaks}}</p>
+{% endblock %}

@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'article',
+    'bootstrap3',
+    'disqus',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -56,7 +59,8 @@ ROOT_URLCONF = 'chamber.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/Users/rchekalov/djangoenv/bin/chamber/templates'],
+        'DIRS': ['/Users/rchekalov/djangoenv/bin/chamber/templates',
+                 '/Users/rchekalov/djangoenv/bin/chamber/article/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,12 +81,14 @@ WSGI_APPLICATION = 'chamber.wsgi.application'
 
 DATABASES = {
     'default': {
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #'NAME': 'chamber',
+    #'USER': 'postgres',
+    #'PASSWORD': 'postgres',
+    #'HOST': '', # Set to empty string for localhost.
+    #'PORT': '', # Set to empty string for default.
+    'ENGINE': 'django.db.backends.sqlite3',
     'NAME': 'chamber',
-    'USER': 'postgres',
-    'PASSWORD': 'postgres',
-    'HOST': '', # Set to empty string for localhost.
-    'PORT': '', # Set to empty string for default.
     }
 }
 
@@ -124,3 +130,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/Users/rchekalov/djangoenv/bin/chamber/chamber/static',
+]
