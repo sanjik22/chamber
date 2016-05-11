@@ -88,7 +88,7 @@ DATABASES = {
     #'HOST': '', # Set to empty string for localhost.
     #'PORT': '', # Set to empty string for default.
     'ENGINE': 'django.db.backends.sqlite3',
-    'NAME': 'chamber',
+    'NAME': 'chamber_db',
     }
 }
 
